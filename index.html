@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>The Crochet Corner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>The Crochet Corner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="your-logo.png" alt="The Crochet Corner Logo" class="logo">
+      <h2>Handmade Crochet Creations</h2>
+      <p>Discover unique, cozy, and beautiful crochet items made with love. Shop now or follow us on <a href="https://www.instagram.com/thecrochet_.corner/" target="_blank">Instagram</a>!</p>
+    </section>
+    <section class="featured-products">
+      <h3>Featured Products</h3>
+      <div class="products" id="products">
+        <!-- products loaded dynamically -->
+      </div>
+    </section>
+    <section class="instagram-feed">
+      <h3>From Instagram</h3>
+      <!-- replace the iframe src with a widget URL from SnapWidget/LightWidget or similar -->
+      <iframe src="https://snapwidget.com/embed/your-widget-id" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 The Crochet Corner | <a href="https://www.instagram.com/thecrochet_.corner/" target="_blank">Instagram</a></p>
+  </footer>
+  <script src="products.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadProducts('products', 1);
+      // cart.js will also run its DOMContentLoaded listener below
+    });
+  </script>
+  <script src="cart.js"></script>
+</body>
+</html>

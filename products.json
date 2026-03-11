@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Crochet Plushie",
+    "price": 15.00,
+    "image": "product1.jpg",
+    "description": "Soft, cuddly, and perfect for gifts!"
+  },
+  {
+    "name": "Crochet Blanket",
+    "price": 45.00,
+    "image": "product2.jpg",
+    "description": "Cozy blanket made with high-quality yarn."
+  }
+]
