@@ -191,6 +191,7 @@ button {
 .hero-panel,
 .highlight-card,
 .shop-section,
+.keychain-section,
 .custom-orders,
 .story-card,
 .testimonial-card,
@@ -204,6 +205,7 @@ button {
 .hero-copy,
 .hero-panel,
 .shop-section,
+.keychain-section,
 .custom-orders,
 .faq-section,
 .cta-banner {
@@ -459,6 +461,69 @@ h3 {
   background: rgba(255, 252, 248, 0.76);
 }
 
+.keychain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.keychain-card {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: calc(var(--radius-xl) - 8px);
+  border: 1px solid rgba(95, 63, 45, 0.12);
+  background: rgba(255, 253, 251, 0.82);
+  box-shadow: 0 18px 36px rgba(76, 42, 24, 0.08);
+}
+
+.keychain-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 6px);
+  background: rgba(255, 248, 241, 0.9);
+}
+
+.keychain-card figcaption {
+  display: grid;
+  gap: 6px;
+}
+
+.keychain-card strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.keychain-card__price {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--surface-accent);
+  color: var(--primary-deep);
+  font-weight: 800;
+}
+
+.keychain-card span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.keychain-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.keychain-section__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
 .highlight-card__number {
   margin: 0 0 18px;
   color: var(--primary);
@@ -467,6 +532,7 @@ h3 {
 }
 
 .shop-section,
+.keychain-section,
 .custom-orders,
 .faq-section,
 .cta-banner {
@@ -990,6 +1056,7 @@ h3 {
   }
 
   .catalog-grid,
+  .keychain-grid,
   .highlights,
   .testimonial-grid,
   .steps-grid {
@@ -1012,6 +1079,7 @@ h3 {
   .hero-copy,
   .hero-panel,
   .shop-section,
+  .keychain-section,
   .custom-orders,
   .story-card,
   .faq-section,
@@ -1020,6 +1088,7 @@ h3 {
   }
 
   .catalog-grid,
+  .keychain-grid,
   .highlights,
   .testimonial-grid,
   .steps-grid,
@@ -1034,6 +1103,7 @@ h3 {
   .header-actions,
   .catalog-toolbar,
   .section-heading,
+  .keychain-section__actions,
   .cta-banner,
   .cart-actions {
     flex-direction: column;
