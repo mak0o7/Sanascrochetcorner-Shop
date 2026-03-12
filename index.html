@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thecrochet_.corner | Handmade Crochet Store</title>
+  <meta
+    name="description"
+    content="Shop handmade crochet bouquets, bags, gifts, and decor from thecrochet_.corner."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="thecrochet_.corner home">
+        <span class="brand-mark__icon">tc</span>
+        <span class="brand-mark__text">
+          <strong>thecrochet_.corner</strong>
+          <small>handmade crochet boutique</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#custom-orders">Custom Orders</a>
+        <a href="#story">Story</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="pill-link" href="https://www.instagram.com/thecrochet_.corner/" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+        <button class="cart-button" id="open-cart" type="button" aria-controls="cart-panel" aria-expanded="false">
+          Cart
+          <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Made to gift, keep, and collect</p>
+          <h1>A full storefront for a crochet brand that feels warm, modern, and handcrafted.</h1>
+          <p class="hero-text">
+            Discover bouquet wraps, textured tote bags, keychains, nursery gifts, and cozy home details inspired by
+            the charm of <strong>thecrochet_.corner</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#shop">Shop the collection</a>
+            <a class="button button--secondary" href="#custom-orders">Start a custom order</a>
+          </div>
+          <div class="hero-notes">
+            <span>Handmade in small batches</span>
+            <span>Custom color palettes available</span>
+            <span>Order summary ready for Instagram DM</span>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-card hero-card--large">
+            <span class="hero-card__label">Best Seller</span>
+            <h2>Signature Rose Bouquet</h2>
+            <p>Soft blush petals, wrapped stems, and ribbon finishing for gifting moments.</p>
+            <strong>$48</strong>
+          </div>
+          <div class="hero-card-grid">
+            <div class="hero-card hero-card--small">
+              <span>12</span>
+              <p>ready-to-order pieces in the current drop</p>
+            </div>
+            <div class="hero-card hero-card--small accent">
+              <span>4-7 days</span>
+              <p>average make time for custom crochet requests</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Highlights">
+        <div class="marquee-track">
+          <span>crochet bouquets</span>
+          <span>nursery gifts</span>
+          <span>market bags</span>
+          <span>amigurumi keepsakes</span>
+          <span>custom colors</span>
+          <span>gift-ready packaging</span>
+        </div>
+      </section>
+
+      <section class="highlights">
+        <article class="highlight-card">
+          <p class="highlight-card__number">01</p>
+          <h3>Curated collections</h3>
+          <p>Shop by occasion: gifting, home styling, baby showers, or everyday accessories.</p>
+        </article>
+        <article class="highlight-card">
+          <p class="highlight-card__number">02</p>
+          <h3>Custom-built orders</h3>
+          <p>Choose color stories, bouquet size, and yarn textures for one-of-one handmade pieces.</p>
+        </article>
+        <article class="highlight-card">
+          <p class="highlight-card__number">03</p>
+          <h3>Instagram-ready checkout</h3>
+          <p>Build a cart, copy your order summary, then send it straight to the brand on Instagram.</p>
+        </article>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Storefront</p>
+            <h2>Browse the crochet collection</h2>
+          </div>
+          <p>
+            Filter the catalog by category and add handmade pieces to your cart. Each card includes style notes that
+            make the page feel like a full boutique, not just a gallery.
+          </p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <label class="search-field" for="search-products">
+            <span>Search pieces</span>
+            <input id="search-products" type="search" placeholder="Rose bouquet, tote, coaster..." autocomplete="off">
+          </label>
+
+          <div class="filter-group" aria-label="Product filters">
+            <button class="filter-pill active" data-filter="all" type="button">All</button>
+            <button class="filter-pill" data-filter="bouquets" type="button">Bouquets</button>
+            <button class="filter-pill" data-filter="bags" type="button">Bags</button>
+            <button class="filter-pill" data-filter="decor" type="button">Decor</button>
+            <button class="filter-pill" data-filter="gifts" type="button">Gifts</button>
+            <button class="filter-pill" data-filter="baby" type="button">Baby</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="custom-orders" id="custom-orders">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Custom Orders</p>
+            <h2>Design a made-for-you crochet piece</h2>
+          </div>
+          <a class="button button--secondary" href="https://www.instagram.com/thecrochet_.corner/" target="_blank" rel="noreferrer">
+            Message on Instagram
+          </a>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span>1</span>
+            <h3>Pick the product type</h3>
+            <p>Choose bouquets, baby keepsakes, bags, room decor, or an idea you want developed from scratch.</p>
+          </article>
+          <article class="step-card">
+            <span>2</span>
+            <h3>Choose the palette</h3>
+            <p>Share the shades you love: dusty rose, sage, oat, lilac, sunflower, classic neutrals, or seasonal mixes.</p>
+          </article>
+          <article class="step-card">
+            <span>3</span>
+            <h3>Confirm the brief</h3>
+            <p>Send your cart summary or wishlist through Instagram DM to turn the storefront into a real order flow.</p>
+          </article>
+        </div>
+
+        <div class="custom-orders__panel">
+          <div>
+            <p class="eyebrow">Popular requests</p>
+            <ul class="request-list">
+              <li>Birthday bouquet sets with name tags</li>
+              <li>Mother-daughter matching mini totes</li>
+              <li>Nursery mobiles and plush toy bundles</li>
+              <li>Wedding keepsake flowers in custom tones</li>
+            </ul>
+          </div>
+          <div class="custom-orders__note">
+            <strong>Current turnaround:</strong>
+            <p>Ready-to-order pieces ship first. Custom work usually takes 4-7 days depending on size and yarn stock.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="story-card story-card--quote">
+          <p class="eyebrow">Brand Story</p>
+          <h2>
+            A crochet label deserves more than a feed. This storefront turns the handmade identity of
+            <strong>thecrochet_.corner</strong> into a shop experience with mood, structure, and conversion points.
+          </h2>
+        </div>
+        <div class="story-card story-card--details">
+          <div>
+            <p class="eyebrow">What this version includes</p>
+            <ul class="details-list">
+              <li>Hero-led merchandising and brand positioning</li>
+              <li>Searchable product catalog with category filters</li>
+              <li>Cart drawer with quantity controls and shipping logic</li>
+              <li>Instagram-based checkout handoff for a no-backend workflow</li>
+            </ul>
+          </div>
+          <div class="social-proof">
+            <article>
+              <strong>Gift-ready</strong>
+              <p>Designed for bouquet gifting, milestone presents, and soft home styling moments.</p>
+            </article>
+            <article>
+              <strong>Mobile-first</strong>
+              <p>Readable type, clear actions, and a sticky cart flow that work cleanly on phones.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Customer Mood</p>
+            <h2>What shoppers expect from a handmade crochet brand</h2>
+          </div>
+          <p>These testimonials are styled to help the storefront feel complete and ready for launch.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>"The bouquet looked like it came out of a keepsake box. Soft colors, beautiful wrapping, and so giftable."</p>
+            <strong>Layla, gifting order</strong>
+          </article>
+          <article class="testimonial-card">
+            <p>"I love that I can shop the collection first, then send my exact wishlist through Instagram without guessing."</p>
+            <strong>Amira, custom tote buyer</strong>
+          </article>
+          <article class="testimonial-card">
+            <p>"The whole site feels thoughtful and handmade, not generic. It matches the warmth you want from crochet products."</p>
+            <strong>Sara, nursery decor order</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2>Helpful details before ordering</h2>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>How does checkout work without a payment page?</summary>
+            <p>Add items to your cart, copy the generated order summary, and send it through Instagram DM to complete the order manually.</p>
+          </details>
+          <details>
+            <summary>Can customers request different colors?</summary>
+            <p>Yes. The custom order section is designed around alternate palettes, bouquet sizes, baby themes, and gift wrapping preferences.</p>
+          </details>
+          <details>
+            <summary>Can this storefront be connected to a real checkout later?</summary>
+            <p>Yes. The layout is ready to be extended with Shopify, Stripe, WhatsApp ordering, or a custom backend checkout flow.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div>
+          <p class="eyebrow">Launch-ready concept</p>
+          <h2>Built to feel like a real crochet boutique from the first scroll.</h2>
+        </div>
+        <a class="button button--primary" href="https://www.instagram.com/thecrochet_.corner/" target="_blank" rel="noreferrer">
+          Visit the Instagram page
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-panel__header">
+      <div>
+        <p class="eyebrow">Your basket</p>
+        <h2>Order summary</h2>
+      </div>
+      <button class="icon-button" id="close-cart" type="button" aria-label="Close cart">x</button>
+    </div>
+
+    <div class="cart-panel__body">
+      <div class="cart-progress">
+        <p id="shipping-message">Add $80 more to unlock complimentary gift wrapping.</p>
+        <div class="progress-bar" aria-hidden="true">
+          <span id="shipping-progress"></span>
+        </div>
+      </div>
+
+      <div id="cart-items" class="cart-items"></div>
+    </div>
+
+    <div class="cart-panel__footer">
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">$0</strong>
+        </div>
+        <small>Gift wrapping is complimentary over $80.</small>
+      </div>
+
+      <div class="cart-actions">
+        <button class="button button--secondary" id="copy-order" type="button">Copy order summary</button>
+        <a class="button button--primary" href="https://www.instagram.com/thecrochet_.corner/" target="_blank" rel="noreferrer">
+          Open Instagram DM
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
