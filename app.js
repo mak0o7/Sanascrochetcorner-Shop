@@ -121,6 +121,7 @@
   }
 ];
 
+const usdToInrRate = 92.31;
 const shippingThreshold = 80;
 const state = {
   filter: "all",
@@ -157,11 +158,13 @@ function saveCart() {
 }
 
 function formatPrice(value) {
-  return new Intl.NumberFormat("en-US", {
+  const inrValue = value * usdToInrRate;
+
+  return new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
     maximumFractionDigits: 0
-  }).format(value);
+  }).format(inrValue);
 }
 
 function getFilteredProducts() {
