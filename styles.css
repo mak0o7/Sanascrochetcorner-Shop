@@ -1053,3 +1053,65 @@ h3 {
     height: min(82vh, 760px);
   }
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.brand-mark {
+  gap: 16px;
+}
+
+.brand-mark__logo {
+  width: 78px;
+  height: auto;
+  flex: 0 0 78px;
+  padding: 8px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(95, 63, 45, 0.12);
+}
+
+.brand-mark__text strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.brand-mark__text small {
+  text-transform: none;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+}
+
+.hero-card--logo {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  text-align: center;
+  background: rgba(255, 253, 250, 0.92);
+}
+
+.hero-card__logo {
+  width: min(100%, 270px);
+  height: auto;
+}
+
+.hero-card--logo p {
+  margin: 0;
+  max-width: 26ch;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .brand-mark {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-mark__logo {
+    width: 66px;
+    flex-basis: 66px;
+  }
+}
