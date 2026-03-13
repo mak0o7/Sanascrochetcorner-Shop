@@ -470,6 +470,7 @@ h3 {
 .keychain-card {
   margin: 0;
   display: grid;
+  align-content: start;
   gap: 14px;
   padding: 16px;
   border-radius: calc(var(--radius-xl) - 8px);
@@ -480,10 +481,12 @@ h3 {
 
 .keychain-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: clamp(280px, 32vw, 420px);
+  padding: 12px;
+  object-fit: contain;
   border-radius: calc(var(--radius-lg) - 6px);
-  background: rgba(255, 248, 241, 0.9);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.96), rgba(255, 248, 241, 0.92));
 }
 
 .keychain-card figcaption {
