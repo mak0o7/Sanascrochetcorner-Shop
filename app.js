@@ -122,6 +122,108 @@
 ];
 
 const usdToInrRate = 92.31;
+const keychainProducts = [
+  {
+    id: "keychain-flag-pouch",
+    name: "Flag Pouch Charm",
+    price: 3.7807,
+    category: "keychains",
+    description: "Soft crochet flag-shaped pouch charm from the latest drop.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#c95d54", "#f7d5cf"]
+  },
+  {
+    id: "keychain-flat-flag",
+    name: "Flat Flag Charm",
+    price: 4.1057,
+    category: "keychains",
+    description: "A compact flat flag charm available to order through Instagram DM.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#2d6f8f", "#d8ecf7"]
+  },
+  {
+    id: "keychain-flag-pocket",
+    name: "Flag Pocket Charm",
+    price: 4.3224,
+    category: "keychains",
+    description: "Great for gifting, keepsakes, and custom color requests.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#5f8652", "#dce9d3"]
+  },
+  {
+    id: "keychain-heart",
+    name: "Heart Charm",
+    price: 4.6474,
+    category: "keychains",
+    description: "A playful heart-shaped crochet charm from the current collection.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#bf5a79", "#f4d7e2"]
+  },
+  {
+    id: "keychain-tall-flag",
+    name: "Tall Flag Charm",
+    price: 4.864,
+    category: "keychains",
+    description: "DM for pricing, availability, and customization.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#906f4e", "#efe0cd"]
+  },
+  {
+    id: "keychain-mini-scarf",
+    name: "Mini Scarf Charm",
+    price: 5.189,
+    category: "keychains",
+    description: "Part of the latest handmade charm batch with a cozy scarf shape.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#bf6d4d", "#f7ddcc"]
+  },
+  {
+    id: "keychain-paw-print",
+    name: "Paw Print Charm",
+    price: 5.4057,
+    category: "keychains",
+    description: "Ask about colors, stock, and custom options on Instagram.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#4d4947", "#e2dbd8"]
+  },
+  {
+    id: "keychain-cherry-pair",
+    name: "Cherry Pair Charm",
+    price: 5.7307,
+    category: "keychains",
+    description: "Made for gifting, bag charms, and everyday accessories.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#9f3145", "#f5d4dd"]
+  },
+  {
+    id: "keychain-luffy-doll",
+    name: "Luffy Doll Charm",
+    price: 5.9474,
+    category: "keychains",
+    description: "Part of the newest photo set added to the collection.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#d7a04a", "#f8e8c7"]
+  },
+  {
+    id: "keychain-bear-rattle",
+    name: "Bear Rattle Keepsake",
+    price: 6.2723,
+    category: "keychains",
+    description: "Available to ask about through Instagram DM.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#8f735b", "#ebdfd2"]
+  },
+  {
+    id: "keychain-tulip-slipper",
+    name: "Tulip Slipper Pair",
+    price: 6.489,
+    category: "keychains",
+    description: "Ask about colors, stock, and custom options on Instagram.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#b95a6a", "#f2d8df"]
+  }
+];
+const cartCatalog = [...products, ...keychainProducts];
 const shippingThreshold = 80;
 const state = {
   filter: "all",
@@ -130,6 +232,7 @@ const state = {
 };
 
 const productGrid = document.querySelector("#product-grid");
+const keychainGrid = document.querySelector(".keychain-grid");
 const filterButtons = document.querySelectorAll(".filter-pill");
 const searchInput = document.querySelector("#search-products");
 const cartCount = document.querySelector("#cart-count");
@@ -250,7 +353,7 @@ function renderCart() {
     cartItems.innerHTML = `
       <div class="empty-cart">
         <h3>Your cart is still empty</h3>
-        <p>Add a few handmade pieces from the catalog and this panel will build an Instagram-ready order summary.</p>
+        <p>Add a few handmade pieces from the catalog or keychain drop and this panel will build an Instagram-ready order summary.</p>
       </div>
     `;
     return;
@@ -286,7 +389,7 @@ function renderCart() {
 }
 
 function addToCart(productId) {
-  const product = products.find((entry) => entry.id === productId);
+  const product = cartCatalog.find((entry) => entry.id === productId);
 
   if (!product) {
     return;
@@ -391,6 +494,16 @@ searchInput.addEventListener("input", (event) => {
 });
 
 productGrid.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-id]");
+
+  if (!trigger) {
+    return;
+  }
+
+  addToCart(trigger.dataset.id);
+});
+
+keychainGrid.addEventListener("click", (event) => {
   const trigger = event.target.closest("[data-id]");
 
   if (!trigger) {

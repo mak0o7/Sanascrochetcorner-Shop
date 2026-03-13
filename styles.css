@@ -514,6 +514,11 @@ h3 {
   line-height: 1.6;
 }
 
+.keychain-card__button {
+  width: 100%;
+  margin-top: 8px;
+}
+
 .keychain-note {
   margin: 18px 0 0;
   color: var(--muted);
