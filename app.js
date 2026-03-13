@@ -224,6 +224,87 @@ const keychainProducts = [
   }
 ];
 const cartCatalog = [...products, ...keychainProducts];
+const uploadedPhotos = [
+  "instagram_1773388690688.png",
+  "instagram_1773388690651.png",
+  "instagram_1773388690643.png",
+  "instagram_1773388690694.png",
+  "instagram_1773388690663.png",
+  "instagram_1773388690717.png",
+  "instagram_1773388690657.png",
+  "instagram_1773388690676.png",
+  "instagram_1773388690682.png",
+  "instagram_1773388690669.png",
+  "instagram_1773388614176.png",
+  "instagram_1773388614182.png",
+  "instagram_1773388614232.png",
+  "instagram_1773388614160.png",
+  "instagram_1773388614224.png",
+  "instagram_1773388614198.png",
+  "instagram_1773388614190.png",
+  "instagram_1773388588890.png",
+  "instagram_1773388588860.png",
+  "instagram_1773388588873.png",
+  "instagram_1773388588880.png",
+  "instagram_1773388588820.png",
+  "instagram_1773388588839.png",
+  "instagram_1773388588846.png",
+  "instagram_1773388588907.png",
+  "instagram_1773388589109.png",
+  "instagram_1773388588995.png",
+  "instagram_1773388588866.png",
+  "instagram_1773388589119.png",
+  "instagram_1773388588852.png",
+  "instagram_1773388544841.png",
+  "instagram_1773266053996.png",
+  "instagram_1773266054004.png",
+  "instagram_1773266053970.png",
+  "instagram_1773266053977.png",
+  "instagram_1773266053945.png",
+  "instagram_1773266054026.png",
+  "instagram_1773266054043.png",
+  "instagram_1773266054127.png",
+  "instagram_1773266054214.png"
+];
+const uploadedVideos = [
+  "instagram_1773388690637.mp4",
+  "instagram_1773388690703.mp4",
+  "instagram_1773388690710.mp4",
+  "instagram_1773388690623.mp4",
+  "instagram_1773388690631.mp4",
+  "instagram_1773388675432.mp4",
+  "instagram_1773388614208.mp4",
+  "instagram_1773388614248.mp4",
+  "instagram_1773388614215.mp4",
+  "instagram_1773388614240.mp4",
+  "instagram_1773388588826.mp4",
+  "instagram_1773388588977.mp4",
+  "instagram_1773388589036.mp4",
+  "instagram_1773388589077.mp4",
+  "instagram_1773388588930.mp4",
+  "instagram_1773388589097.mp4",
+  "instagram_1773388589045.mp4",
+  "instagram_1773388589066.mp4",
+  "instagram_1773388589024.mp4",
+  "instagram_1773388588953.mp4",
+  "instagram_1773388588945.mp4",
+  "instagram_1773388589004.mp4",
+  "instagram_1773388589014.mp4",
+  "instagram_1773388588833.mp4",
+  "instagram_1773388588937.mp4",
+  "instagram_1773388588986.mp4",
+  "instagram_1773388589056.mp4",
+  "instagram_1773388588899.mp4",
+  "instagram_1773388588969.mp4",
+  "instagram_1773388589130.mp4",
+  "instagram_1773388588915.mp4",
+  "instagram_1773388589087.mp4",
+  "instagram_1773388588961.mp4",
+  "instagram_1773388544821.mp4",
+  "instagram_1773388544849.mp4",
+  "instagram_1773388544828.mp4",
+  "instagram_1773388544833.mp4"
+];
 const shippingThreshold = 80;
 const state = {
   filter: "all",
@@ -233,6 +314,10 @@ const state = {
 
 const productGrid = document.querySelector("#product-grid");
 const keychainGrid = document.querySelector(".keychain-grid");
+const uploadedPhotoGrid = document.querySelector("#uploaded-photo-grid");
+const uploadedVideoRail = document.querySelector("#uploaded-video-rail");
+const uploadedPhotoCount = document.querySelector("#uploaded-photo-count");
+const uploadedVideoCount = document.querySelector("#uploaded-video-count");
 const filterButtons = document.querySelectorAll(".filter-pill");
 const searchInput = document.querySelector("#search-products");
 const cartCount = document.querySelector("#cart-count");
@@ -329,6 +414,53 @@ function renderProducts() {
       `
     )
     .join("");
+}
+
+function renderUploadedMedia() {
+  if (uploadedPhotoGrid) {
+    uploadedPhotoGrid.innerHTML = uploadedPhotos
+      .map(
+        (fileName, index) => `
+          <figure class="upload-photo-card">
+            <img
+              src="./uploads/photos/${fileName}"
+              alt="Uploaded crochet product photo ${index + 1}"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        `
+      )
+      .join("");
+  }
+
+  if (uploadedVideoRail) {
+    uploadedVideoRail.innerHTML = uploadedVideos
+      .map(
+        (fileName, index) => `
+          <article class="upload-video-card">
+            <video
+              controls
+              playsinline
+              muted
+              preload="metadata"
+              title="Uploaded crochet product video ${index + 1}"
+            >
+              <source src="./uploads/videos/${fileName}" type="video/mp4">
+            </video>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  if (uploadedPhotoCount) {
+    uploadedPhotoCount.textContent = `${uploadedPhotos.length} photos`;
+  }
+
+  if (uploadedVideoCount) {
+    uploadedVideoCount.textContent = `${uploadedVideos.length} videos`;
+  }
 }
 
 function getCartSubtotal() {
@@ -536,4 +668,5 @@ window.addEventListener("keydown", (event) => {
 });
 
 renderProducts();
+renderUploadedMedia();
 renderCart();

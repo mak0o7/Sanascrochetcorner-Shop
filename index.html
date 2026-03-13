@@ -14,13 +14,13 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="./styles.css?v=20260313-keychains-4">
+  <link rel="stylesheet" href="./styles.css?v=20260313-media-1">
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <a class="brand-mark" href="#top" aria-label="The Crochet Corner home">
-        <img class="brand-mark__logo" src="./logo.svg?v=20260313-keychains-4" alt="The Crochet Corner logo">
+        <img class="brand-mark__logo" src="./logo.svg?v=20260313-media-1" alt="The Crochet Corner logo">
         <span class="brand-mark__text">
           <strong>The Crochet Corner</strong>
           <small>@thecrochet_.corner</small>
@@ -30,6 +30,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="#shop">Shop</a>
         <a href="#keychains">Keychains</a>
+        <a href="#media">Media</a>
         <a href="#custom-orders">Custom Orders</a>
         <a href="#story">Story</a>
         <a href="#faq">FAQ</a>
@@ -68,7 +69,7 @@
 
         <div class="hero-panel">
           <div class="hero-card hero-card--logo">
-            <img class="hero-card__logo" src="./logo.svg?v=20260313-keychains-4" alt="The Crochet Corner logo">
+            <img class="hero-card__logo" src="./logo.svg?v=20260313-media-1" alt="The Crochet Corner logo">
             <p>Elegant, giftable crochet pieces with a boutique feel from the first scroll.</p>
           </div>
           <div class="hero-card hero-card--large">
@@ -241,6 +242,45 @@
           <a class="button button--secondary" href="https://www.instagram.com/thecrochet_.corner/" target="_blank" rel="noreferrer">
             Ask about keychains on Instagram
           </a>
+        </div>
+      </section>
+
+      <section class="media-section" id="media">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest Uploads</p>
+            <h2>Fresh product photos and videos from the newest MEGA batch</h2>
+          </div>
+          <p>
+            The newest product images and reels are now separated into photo and video galleries so customers can
+            browse the full upload batch in one place. Photos load as a clean lookbook, and each video can be played
+            directly on the site.
+          </p>
+        </div>
+
+        <div class="media-panels">
+          <section class="media-panel" aria-labelledby="media-photos-heading">
+            <div class="media-panel__header">
+              <div>
+                <p class="eyebrow">Photo Lookbook</p>
+                <h3 id="media-photos-heading">Uploaded product photos</h3>
+              </div>
+              <span class="media-count" id="uploaded-photo-count">0 photos</span>
+            </div>
+            <div class="upload-photo-grid" id="uploaded-photo-grid"></div>
+          </section>
+
+          <section class="media-panel" aria-labelledby="media-videos-heading">
+            <div class="media-panel__header">
+              <div>
+                <p class="eyebrow">Video Reels</p>
+                <h3 id="media-videos-heading">Uploaded product videos</h3>
+              </div>
+              <span class="media-count" id="uploaded-video-count">0 videos</span>
+            </div>
+            <p class="media-note">Tap any reel to play. Videos are muted by default and open with built-in controls.</p>
+            <div class="upload-video-rail" id="uploaded-video-rail"></div>
+          </section>
         </div>
       </section>
 
@@ -454,7 +494,7 @@
   <div class="backdrop" id="backdrop" hidden></div>
   <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
 
-  <script src="./app.js?v=20260313-keychains-4"></script>
+  <script src="./app.js?v=20260313-media-1"></script>
 </body>
 </html>
 
