@@ -577,13 +577,68 @@ h3 {
   color: var(--muted);
 }
 
-.upload-photo-grid {
+.collection-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.collection-card {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border-radius: calc(var(--radius-lg) - 2px);
+  border: 1px solid rgba(95, 63, 45, 0.1);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.96), rgba(255, 248, 241, 0.92));
+  box-shadow: 0 12px 24px rgba(76, 42, 24, 0.08);
+}
+
+.collection-card__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.collection-card__header h4,
+.collection-card__header strong {
+  margin: 0;
+}
+
+.collection-card__header h4 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.collection-card__header strong {
+  color: var(--muted);
+}
+
+.collection-price {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(43, 30, 26, 0.08);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.collection-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.collection-media-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
-.upload-photo-card,
+.collection-media-card,
 .upload-video-card {
   margin: 0;
   overflow: hidden;
@@ -594,7 +649,7 @@ h3 {
   box-shadow: 0 12px 24px rgba(76, 42, 24, 0.08);
 }
 
-.upload-photo-card img {
+.collection-media-card img {
   width: 100%;
   height: clamp(240px, 26vw, 340px);
   padding: 10px;
@@ -1151,7 +1206,7 @@ h3 {
   }
 
   .catalog-grid,
-  .upload-photo-grid,
+  .collection-media-grid,
   .keychain-grid,
   .highlights,
   .testimonial-grid,
@@ -1185,7 +1240,7 @@ h3 {
   }
 
   .catalog-grid,
-  .upload-photo-grid,
+  .collection-media-grid,
   .keychain-grid,
   .highlights,
   .testimonial-grid,
@@ -1207,6 +1262,7 @@ h3 {
   .section-heading,
   .keychain-section__actions,
   .media-panel__header,
+  .collection-card__header,
   .cta-banner,
   .cart-actions {
     flex-direction: column;

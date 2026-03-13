@@ -224,47 +224,77 @@ const keychainProducts = [
   }
 ];
 const cartCatalog = [...products, ...keychainProducts];
-const uploadedPhotos = [
-  "instagram_1773388690688.png",
-  "instagram_1773388690651.png",
-  "instagram_1773388690643.png",
-  "instagram_1773388690694.png",
-  "instagram_1773388690663.png",
-  "instagram_1773388690717.png",
-  "instagram_1773388690657.png",
-  "instagram_1773388690676.png",
-  "instagram_1773388690682.png",
-  "instagram_1773388690669.png",
-  "instagram_1773388614176.png",
-  "instagram_1773388614182.png",
-  "instagram_1773388614232.png",
-  "instagram_1773388614160.png",
-  "instagram_1773388614224.png",
-  "instagram_1773388614198.png",
-  "instagram_1773388614190.png",
-  "instagram_1773388588890.png",
-  "instagram_1773388588860.png",
-  "instagram_1773388588873.png",
-  "instagram_1773388588880.png",
-  "instagram_1773388588820.png",
-  "instagram_1773388588839.png",
-  "instagram_1773388588846.png",
-  "instagram_1773388588907.png",
-  "instagram_1773388589109.png",
-  "instagram_1773388588995.png",
-  "instagram_1773388588866.png",
-  "instagram_1773388589119.png",
-  "instagram_1773388588852.png",
-  "instagram_1773388544841.png",
-  "instagram_1773266053996.png",
-  "instagram_1773266054004.png",
-  "instagram_1773266053970.png",
-  "instagram_1773266053977.png",
-  "instagram_1773266053945.png",
-  "instagram_1773266054026.png",
-  "instagram_1773266054043.png",
-  "instagram_1773266054127.png",
-  "instagram_1773266054214.png"
+const collectionPanels = [
+  {
+    label: "Bouquets",
+    title: "Best seller bouquets",
+    detail: "Signature Rose Bouquet",
+    priceBase: 48,
+    pricePrefix: "",
+    note: "Curated with the floral uploads that best fit the Signature Rose Bouquet and Sunflower Glow Bundle story.",
+    files: [
+      "instagram_1773266054214.png",
+      "instagram_1773388544841.png",
+      "instagram_1773266054127.png",
+      "instagram_1773388690682.png"
+    ]
+  },
+  {
+    label: "Bags",
+    title: "Bags",
+    detail: "Everyday Market Tote + Mini Heart Crossbody",
+    priceBase: 36,
+    pricePrefix: "From ",
+    note: "Bag-related uploads are now grouped here to support the Bags filter and product story.",
+    files: [
+      "instagram_1773388588995.png",
+      "instagram_1773266053970.png",
+      "instagram_1773388588839.png",
+      "instagram_1773388614198.png"
+    ]
+  },
+  {
+    label: "Decor",
+    title: "Decor",
+    detail: "Bloom Coaster Set + Daisy Storage Basket",
+    priceBase: 24,
+    pricePrefix: "From ",
+    note: "Soft decor-style uploads now support the Decor section with a clearer visual mood.",
+    files: [
+      "instagram_1773388588860.png",
+      "instagram_1773388589119.png",
+      "instagram_1773388690717.png",
+      "instagram_1773388690651.png"
+    ]
+  },
+  {
+    label: "Gifts",
+    title: "Gifts",
+    detail: "Custom Name Keychain + Keepsake Gift Box",
+    priceBase: 16,
+    pricePrefix: "From ",
+    note: "Gift-ready keychains and add-ons are now grouped under the Gifts section with the right entry price.",
+    files: [
+      "instagram_1773388588820.png",
+      "instagram_1773388588852.png",
+      "instagram_1773388588907.png",
+      "instagram_1773388588890.png"
+    ]
+  },
+  {
+    label: "Baby",
+    title: "Baby",
+    detail: "Cloud Baby Booties + nursery gifting",
+    priceBase: 22,
+    pricePrefix: "From ",
+    note: "Baby uploads now sit together so the Baby section feels complete and the pricing lines up with the catalog.",
+    files: [
+      "instagram_1773388614160.png",
+      "instagram_1773388614176.png",
+      "instagram_1773388614182.png",
+      "instagram_1773388614232.png"
+    ]
+  }
 ];
 const uploadedVideos = [
   "instagram_1773388690637.mp4",
@@ -418,17 +448,36 @@ function renderProducts() {
 
 function renderUploadedMedia() {
   if (uploadedPhotoGrid) {
-    uploadedPhotoGrid.innerHTML = uploadedPhotos
+    uploadedPhotoGrid.innerHTML = collectionPanels
       .map(
-        (fileName, index) => `
-          <figure class="upload-photo-card">
-            <img
-              src="./uploads/photos/${fileName}"
-              alt="Uploaded crochet product photo ${index + 1}"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
+        (panel) => `
+          <article class="collection-card">
+            <div class="collection-card__header">
+              <div>
+                <p class="eyebrow">${panel.label}</p>
+                <h4>${panel.title}</h4>
+                <strong>${panel.detail}</strong>
+              </div>
+              <span class="collection-price">${panel.pricePrefix}${formatPrice(panel.priceBase)}</span>
+            </div>
+            <p class="collection-note">${panel.note}</p>
+            <div class="collection-media-grid">
+              ${panel.files
+                .map(
+                  (fileName, index) => `
+                    <figure class="collection-media-card">
+                      <img
+                        src="./uploads/photos/${fileName}"
+                        alt="${panel.label} crochet product photo ${index + 1}"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                    </figure>
+                  `
+                )
+                .join("")}
+            </div>
+          </article>
         `
       )
       .join("");
@@ -455,7 +504,7 @@ function renderUploadedMedia() {
   }
 
   if (uploadedPhotoCount) {
-    uploadedPhotoCount.textContent = `${uploadedPhotos.length} photos`;
+    uploadedPhotoCount.textContent = `${collectionPanels.length} sections`;
   }
 
   if (uploadedVideoCount) {
