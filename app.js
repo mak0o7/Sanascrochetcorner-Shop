@@ -208,27 +208,17 @@ const keychainProducts = [
 const cartCatalog = [...products, ...keychainProducts];
 const collectionPanels = [
   {
-    label: "Bouquets",
-    title: "Best seller bouquets",
-    detail: "Signature Rose Bouquet",
-    priceBase: 48,
-    pricePrefix: "",
-    note: "Curated with the floral uploads that best fit the Signature Rose Bouquet and Sunflower Glow Bundle story.",
-    files: [
-      "instagram_1773266054214.png",
-      "instagram_1773388544841.png",
-      "instagram_1773266054127.png",
-      "instagram_1773388690682.png"
-    ]
-  },
-  {
     label: "Decor",
     title: "Decor",
     detail: "Bloom Coaster Set + Daisy Storage Basket",
     priceBase: 24,
     pricePrefix: "From ",
-    note: "Soft decor-style uploads now support the Decor section, and the former Bags media is now grouped here too.",
+    note: "Soft decor-style uploads now support the Decor section, and the former Bags and Bouquets media is now grouped here too.",
     files: [
+      "instagram_1773266054214.png",
+      "instagram_1773388544841.png",
+      "instagram_1773266054127.png",
+      "instagram_1773388690682.png",
       "instagram_1773388588860.png",
       "instagram_1773388589119.png",
       "instagram_1773388690717.png",
