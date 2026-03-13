@@ -203,24 +203,6 @@ const keychainProducts = [
     description: "Part of the newest photo set added to the collection.",
     leadTime: "Made in 3-5 days",
     colors: ["#d7a04a", "#f8e8c7"]
-  },
-  {
-    id: "keychain-bear-rattle",
-    name: "Bear Rattle Keepsake",
-    price: 6.2723,
-    category: "keychains",
-    description: "Available to ask about through Instagram DM.",
-    leadTime: "Made in 3-5 days",
-    colors: ["#8f735b", "#ebdfd2"]
-  },
-  {
-    id: "keychain-tulip-slipper",
-    name: "Tulip Slipper Pair",
-    price: 6.489,
-    category: "keychains",
-    description: "Ask about colors, stock, and custom options on Instagram.",
-    leadTime: "Made in 3-5 days",
-    colors: ["#b95a6a", "#f2d8df"]
   }
 ];
 const cartCatalog = [...products, ...keychainProducts];
@@ -240,31 +222,21 @@ const collectionPanels = [
     ]
   },
   {
-    label: "Bags",
-    title: "Bags",
-    detail: "Everyday Market Tote + Mini Heart Crossbody",
-    priceBase: 36,
-    pricePrefix: "From ",
-    note: "Bag-related uploads are now grouped here to support the Bags filter and product story.",
-    files: [
-      "instagram_1773388588995.png",
-      "instagram_1773266053970.png",
-      "instagram_1773388588839.png",
-      "instagram_1773388614198.png"
-    ]
-  },
-  {
     label: "Decor",
     title: "Decor",
     detail: "Bloom Coaster Set + Daisy Storage Basket",
     priceBase: 24,
     pricePrefix: "From ",
-    note: "Soft decor-style uploads now support the Decor section with a clearer visual mood.",
+    note: "Soft decor-style uploads now support the Decor section, and the former Bags media is now grouped here too.",
     files: [
       "instagram_1773388588860.png",
       "instagram_1773388589119.png",
       "instagram_1773388690717.png",
-      "instagram_1773388690651.png"
+      "instagram_1773388690651.png",
+      "instagram_1773388588995.png",
+      "instagram_1773266053970.png",
+      "instagram_1773388588839.png",
+      "instagram_1773388614198.png"
     ]
   },
   {
