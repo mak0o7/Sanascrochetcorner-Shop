@@ -2,143 +2,175 @@ const products = [
   {
     id: "signature-rose-bouquet",
     name: "Signature Rose Bouquet",
-    price: 48,
+    price: 499,
     category: "bouquets",
     badge: "Best seller",
-    description: "A gift-ready bouquet wrap with soft plush pairing and boutique presentation for special moments.",
+    description: "Single stem bouquet wrapped cleanly with ribbon for classic gifting.",
     leadTime: "Ready to order",
-    colors: ["#d8a0a2", "#f5e0dd"],
-    image: "./uploads/photos/instagram_1773388690717.png"
+    colors: ["#9d3033", "#f6e6e2"],
+    image: "./uploads/photos/studio-refresh/hero-rose-bouquet.jpg"
   },
   {
-    id: "mini-bouquet-charm",
-    name: "Mini Bouquet Charm",
-    price: 22,
+    id: "blush-tulips",
+    name: "Blush Tulips",
+    price: 649,
     category: "bouquets",
-    badge: "Small bouquet",
-    description: "A petite bouquet-style charm with ribbon finishing for bags, keys, and keepsake add-ons.",
+    badge: "Soft bloom",
+    description: "Three-stem tulips with crisp wrapping and a softer studio palette.",
     leadTime: "Made in 2-4 days",
-    colors: ["#be8a7e", "#efe2d8"],
-    image: "./uploads/photos/instagram_1773266054127.png"
+    colors: ["#d2abbc", "#f8ebef"],
+    image: "./uploads/photos/studio-refresh/rail-tulips.webp"
   },
   {
-    id: "sunflower-charm-pair",
-    name: "Sunflower Charm Pair",
-    price: 24,
+    id: "crochet-lily",
+    name: "Crochet Lily",
+    price: 549,
     category: "bouquets",
-    badge: "Bright drop",
-    description: "Sunny handmade charm pairings that bring a cheerful crochet accent to gifts and display corners.",
-    leadTime: "Ready to order",
-    colors: ["#d09a36", "#f2e0aa"],
-    image: "./uploads/photos/instagram_1773266054214.png"
+    badge: "Fresh stem",
+    description: "A delicate floral stem made for bouquets, desk styling, and custom bunches.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#8d4f73", "#f6dfec"],
+    image: "./uploads/photos/studio-refresh/product-lily.jpg"
   },
   {
-    id: "moss-octopus-pair",
-    name: "Moss Octopus Pair",
-    price: 18,
-    category: "decor",
-    badge: "Shelf detail",
-    description: "A playful squishy pair sized for desks, display shelves, and cozy room styling moments.",
-    leadTime: "Made in 2-3 days",
-    colors: ["#6f7f56", "#dce7cf"],
-    image: "./uploads/photos/instagram_1773266053996.png"
-  },
-  {
-    id: "lavender-doll-keepsake",
-    name: "Lavender Doll Keepsake",
-    price: 31,
-    category: "decor",
-    badge: "Display piece",
-    description: "A handcrafted doll keepsake designed to sit beautifully in bedrooms, gift corners, and memory shelves.",
-    leadTime: "Made in 4-6 days",
-    colors: ["#9076a7", "#ece2f6"],
-    image: "./uploads/photos/instagram_1773388690682.png"
-  },
-  {
-    id: "puffy-flower-charm",
-    name: "Puffy Flower Charm",
-    price: 14,
+    id: "bunny-bouquet-box",
+    name: "Bunny & Bouquet Box",
+    price: 699,
     category: "gifts",
-    badge: "Gift extra",
-    description: "A soft little flower charm that works as a sweet add-on for keys, packages, and surprise gifts.",
-    leadTime: "Ready to order",
-    colors: ["#d8a9b4", "#f7e5e8"],
-    image: "./uploads/photos/instagram_1773266053945.png"
+    badge: "Giftable",
+    description: "A bunny plush paired with a bouquet in a box-style keepsake presentation.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#e0c6d4", "#f8f0f4"],
+    image: "./uploads/photos/studio-refresh/product-bunny-bouquet-box.jpg"
   },
   {
-    id: "keepsake-gift-box",
-    name: "Keepsake Gift Box",
-    price: 28,
+    id: "heart-quran-cover",
+    name: "Heart Quran Cover",
+    price: 799,
     category: "gifts",
-    badge: "Ready to gift",
-    description: "A crochet-led presentation piece with thoughtful packaging that feels complete from the first look.",
-    leadTime: "Ready to order",
-    colors: ["#b27258", "#f3ddd1"],
-    image: "./uploads/photos/instagram_1773388544841.png"
+    badge: "Thoughtful gift",
+    description: "A soft crochet Quran cover with stitched heart panels and a keepsake feel.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#dcb6c6", "#f9ecf2"],
+    image: "./uploads/photos/studio-refresh/product-heart-quran-cover.jpg"
   },
   {
-    id: "sleepy-puppy-plush",
-    name: "Sleepy Puppy Plush",
-    price: 29,
-    category: "gifts",
-    badge: "Plush favorite",
-    description: "A soft puppy plush made for cozy gifting moments, display shelves, and collectible crochet corners.",
-    leadTime: "Made in 4-5 days",
-    colors: ["#9f7d66", "#efe0d7"],
-    image: "./uploads/photos/instagram_1773388690643.png"
-  },
-  {
-    id: "mr-beans-teddy",
-    name: "Mr. Beans Teddy",
-    price: 32,
+    id: "batman-crochet-plush",
+    name: "Batman Crochet Plush",
+    price: 799,
     category: "gifts",
     badge: "Collector piece",
-    description: "A long-limbed teddy with a warm handmade look and the kind of finish people keep for years.",
+    description: "A compact amigurumi character plush for collectors and playful gifting.",
     leadTime: "Made in 4-6 days",
-    colors: ["#7e5844", "#e8d3c8"],
-    image: "./uploads/photos/instagram_1773388690663.png"
+    colors: ["#40435a", "#e2e5ef"],
+    image: "./uploads/photos/studio-refresh/product-batman.jpg"
   },
   {
-    id: "cloud-baby-booties",
-    name: "Cloud Baby Booties",
-    price: 22,
+    id: "baby-gift-box",
+    name: "Baby Gift Box Set",
+    price: 899,
     category: "baby",
-    badge: "Newborn favorite",
-    description: "A gentle booties-and-cap set prepared for baby gifting, first photos, and memory boxes.",
-    leadTime: "Made in 3-4 days",
-    colors: ["#8cb6d7", "#e6f2fb"],
-    image: "./uploads/photos/instagram_1773388614160.png"
+    badge: "New baby",
+    description: "A boxed baby set that feels ready for welcome-home gifts and memory photos.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#a2c2d3", "#eff7fb"],
+    image: "./uploads/photos/studio-refresh/product-baby-gift-box.jpg"
   },
   {
-    id: "blossom-baby-frock-set",
-    name: "Blossom Baby Frock Set",
-    price: 58,
+    id: "baby-bow-booties",
+    name: "Baby Bow Booties",
+    price: 499,
     category: "baby",
-    badge: "Occasion set",
-    description: "A full frock set with floral trims for baby showers, milestone gifts, and twin-set requests.",
-    leadTime: "Made in 5-7 days",
-    colors: ["#b67b87", "#f2e0df"],
-    image: "./uploads/photos/instagram_1773388614232.png"
-  },
-  {
-    id: "headband-shoes-box",
-    name: "Headband & Shoes Box",
-    price: 26,
-    category: "baby",
-    badge: "Boxed set",
-    description: "A soft shoes-and-headband pairing packed neatly for simple, thoughtful newborn gifting.",
+    badge: "Soft cotton",
+    description: "Tiny bow booties styled for newborn gifting and baby keepsake boxes.",
     leadTime: "Ready to order",
-    colors: ["#bea387", "#f3e7dd"],
-    image: "./uploads/photos/instagram_1773388614176.png"
+    colors: ["#d4b6bc", "#fbf0f2"],
+    image: "./uploads/photos/studio-refresh/product-baby-booties.webp"
+  },
+  {
+    id: "card-holder",
+    name: "Crochet Card Holder",
+    price: 349,
+    category: "decor",
+    badge: "Daily use",
+    description: "A textured card holder in a soft neutral palette for everyday carry.",
+    leadTime: "Ready to order",
+    colors: ["#9a9a7d", "#eeece0"],
+    image: "./uploads/photos/studio-refresh/rail-card-holder.jpg"
+  },
+  {
+    id: "rose-coaster",
+    name: "Rose Coaster",
+    price: 449,
+    category: "decor",
+    badge: "Home edit",
+    description: "A floral crochet coaster designed to soften trays, shelves, and bedside corners.",
+    leadTime: "Ready to order",
+    colors: ["#c593af", "#f3e2ea"],
+    image: "./uploads/photos/studio-refresh/rail-rose-coaster.jpg"
+  },
+  {
+    id: "airpods-charger-cover",
+    name: "AirPods & Charger Cover",
+    price: 499,
+    category: "decor",
+    badge: "Everyday carry",
+    description: "A matching crochet set for your AirPods and charger with a handmade finish.",
+    leadTime: "Ready to order",
+    colors: ["#a9a0b8", "#efebf6"],
+    image: "./uploads/photos/studio-refresh/hero-spotlight-tech.jpg"
+  },
+  {
+    id: "granny-square-bag",
+    name: "Granny Square Bag",
+    price: 749,
+    category: "decor",
+    badge: "Studio knit",
+    description: "A classic crochet bag with a more styled, boutique presentation.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#6c534b", "#efe4df"],
+    image: "./uploads/photos/studio-refresh/product-granny-square-bag.jpg"
+  },
+  {
+    id: "crossbody-plushie-bag",
+    name: "Crossbody Plushie Bag",
+    price: 699,
+    category: "decor",
+    badge: "Cozy carry",
+    description: "A soft crossbody bag with chunky straps and a playful plushie touch.",
+    leadTime: "Made in 3-5 days",
+    colors: ["#25253a", "#f2ece6"],
+    image: "./uploads/photos/studio-refresh/product-crossbody-bag.jpg"
+  },
+  {
+    id: "cherry-ribbon-bag",
+    name: "Cherry Ribbon Bag",
+    price: 549,
+    category: "decor",
+    badge: "Coquette edit",
+    description: "A ribbon-led bag detail styled for soft, feminine everyday accessories.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#b52d36", "#f9e5e6"],
+    image: "./uploads/photos/studio-refresh/product-cherry-ribbon-bag.jpg"
+  },
+  {
+    id: "sunflower-bag-charm",
+    name: "Sunflower Bag Charm",
+    price: 299,
+    category: "decor",
+    badge: "Bag favorite",
+    description: "A tiny sunflower charm that adds a handmade finish to bags and gifts.",
+    leadTime: "Made in 2-4 days",
+    colors: ["#cc9a30", "#f9edb7"],
+    image: "./uploads/photos/studio-refresh/product-sunflower-bag-charm.jpg"
   }
 ];
 
-const usdToInrRate = 92.31;
 const keychainProducts = [
   {
     id: "keychain-flag-pouch",
     name: "Flag Pouch Charm",
-    price: 3.7807,
+    price: 349,
     category: "keychains",
     description: "Soft crochet flag-shaped pouch charm from the latest drop.",
     leadTime: "Made in 2-4 days",
@@ -148,9 +180,9 @@ const keychainProducts = [
   {
     id: "keychain-flat-flag",
     name: "Flat Flag Charm",
-    price: 4.1057,
+    price: 379,
     category: "keychains",
-    description: "A compact flat flag charm available to order through Instagram DM.",
+    description: "A compact flat flag charm with a clean handmade finish.",
     leadTime: "Made in 2-4 days",
     colors: ["#2d6f8f", "#d8ecf7"],
     image: "./images/keychains-jpg/IMG_5360.jpg"
@@ -158,7 +190,7 @@ const keychainProducts = [
   {
     id: "keychain-flag-pocket",
     name: "Flag Pocket Charm",
-    price: 4.3224,
+    price: 399,
     category: "keychains",
     description: "Great for gifting, keepsakes, and custom color requests.",
     leadTime: "Made in 2-4 days",
@@ -168,7 +200,7 @@ const keychainProducts = [
   {
     id: "keychain-heart",
     name: "Heart Charm",
-    price: 4.6474,
+    price: 429,
     category: "keychains",
     description: "A playful heart-shaped crochet charm from the current collection.",
     leadTime: "Made in 2-4 days",
@@ -178,9 +210,9 @@ const keychainProducts = [
   {
     id: "keychain-tall-flag",
     name: "Tall Flag Charm",
-    price: 4.864,
+    price: 449,
     category: "keychains",
-    description: "DM for pricing, availability, and customization.",
+    description: "A taller stitched silhouette for a softer keepsake look.",
     leadTime: "Made in 2-4 days",
     colors: ["#906f4e", "#efe0cd"],
     image: "./images/keychains-jpg/IMG_5359.jpg"
@@ -188,7 +220,7 @@ const keychainProducts = [
   {
     id: "keychain-mini-scarf",
     name: "Mini Scarf Charm",
-    price: 5.189,
+    price: 479,
     category: "keychains",
     description: "Part of the latest handmade charm batch with a cozy scarf shape.",
     leadTime: "Made in 2-4 days",
@@ -198,9 +230,9 @@ const keychainProducts = [
   {
     id: "keychain-paw-print",
     name: "Paw Print Charm",
-    price: 5.4057,
+    price: 499,
     category: "keychains",
-    description: "Ask about colors, stock, and custom options on Instagram.",
+    description: "Playful and giftable, with room for color customization.",
     leadTime: "Made in 2-4 days",
     colors: ["#4d4947", "#e2dbd8"],
     image: "./images/keychains-jpg/IMG_3455.jpg"
@@ -208,7 +240,7 @@ const keychainProducts = [
   {
     id: "keychain-cherry-pair",
     name: "Cherry Pair Charm",
-    price: 5.7307,
+    price: 529,
     category: "keychains",
     description: "Made for gifting, bag charms, and everyday accessories.",
     leadTime: "Made in 2-4 days",
@@ -218,9 +250,9 @@ const keychainProducts = [
   {
     id: "keychain-luffy-doll",
     name: "Luffy Doll Charm",
-    price: 5.9474,
+    price: 549,
     category: "keychains",
-    description: "Part of the newest photo set added to the collection.",
+    description: "A character charm for anime-loving crochet collectors.",
     leadTime: "Made in 3-5 days",
     colors: ["#d7a04a", "#f8e8c7"],
     image: "./images/keychains-jpg/IMG_6547.jpg"
@@ -228,55 +260,48 @@ const keychainProducts = [
 ];
 
 const cartCatalog = [...products, ...keychainProducts];
+
 const collectionPanels = [
   {
-    label: "Decor",
-    title: "Decor",
-    detail: "Moss Octopus Pair + Lavender Doll Keepsake",
-    priceBase: 18,
+    label: "Signature",
+    title: "Signature pieces",
+    detail: "Bouquets + meaningful gifting pieces",
+    priceBase: 499,
     pricePrefix: "From ",
-    note: "Soft decor-style uploads now support the Decor section, with the earlier bags and bouquet media folded into the same calm showcase.",
+    note: "The newest bouquet and gift uploads now sit together so the storefront opens with the same soft, styled feel as your reference video.",
     files: [
-      "instagram_1773266054214.png",
-      "instagram_1773388544841.png",
-      "instagram_1773266054127.png",
-      "instagram_1773388690682.png",
-      "instagram_1773388588860.png",
-      "instagram_1773388589119.png",
-      "instagram_1773388690717.png",
-      "instagram_1773388690651.png",
-      "instagram_1773388588995.png",
-      "instagram_1773266053970.png",
-      "instagram_1773388588839.png",
-      "instagram_1773388614198.png"
+      "studio-refresh/hero-rose-bouquet.jpg",
+      "studio-refresh/rail-tulips.webp",
+      "studio-refresh/product-bunny-bouquet-box.jpg",
+      "studio-refresh/product-heart-quran-cover.jpg"
     ]
   },
   {
-    label: "Gifts",
-    title: "Gifts",
-    detail: "Puffy Flower Charm + Keepsake Gift Box",
-    priceBase: 14,
+    label: "Decor",
+    title: "Decor",
+    detail: "Card holders + bags + soft utility",
+    priceBase: 349,
     pricePrefix: "From ",
-    note: "Gift-ready charms, plush pieces, and packaging-led uploads now sit together under the Gifts section.",
+    note: "The bags stay merged into decor here, alongside card holders, tech covers, and rose coasters for a more useful home-and-carry edit.",
     files: [
-      "instagram_1773388588820.png",
-      "instagram_1773388588852.png",
-      "instagram_1773388588907.png",
-      "instagram_1773388588890.png"
+      "studio-refresh/rail-card-holder.jpg",
+      "studio-refresh/product-granny-square-bag.jpg",
+      "studio-refresh/product-crossbody-bag.jpg",
+      "studio-refresh/hero-spotlight-tech.jpg"
     ]
   },
   {
     label: "Baby",
-    title: "Baby",
-    detail: "Cloud Baby Booties + Blossom Baby Frock Set",
-    priceBase: 22,
+    title: "Baby & keepsakes",
+    detail: "Gift boxes + booties + careful packaging",
+    priceBase: 499,
     pricePrefix: "From ",
-    note: "Baby uploads now live together so the section feels complete and the entry pricing matches the catalog.",
+    note: "Baby pieces now read as keepsake gifts, with boxed sets, soft booties, and packaging shots that feel closer to the video.",
     files: [
-      "instagram_1773388614160.png",
-      "instagram_1773388614176.png",
-      "instagram_1773388614182.png",
-      "instagram_1773388614232.png"
+      "studio-refresh/product-baby-gift-box.jpg",
+      "studio-refresh/product-baby-booties.webp",
+      "studio-refresh/story-packaging.jpg",
+      "studio-refresh/story-anniversary-cake.jpg"
     ]
   }
 ];
@@ -284,44 +309,14 @@ const collectionPanels = [
 const uploadedVideos = [
   "instagram_1773388690637.mp4",
   "instagram_1773388690703.mp4",
-  "instagram_1773388690710.mp4",
-  "instagram_1773388690623.mp4",
-  "instagram_1773388690631.mp4",
-  "instagram_1773388675432.mp4",
   "instagram_1773388614208.mp4",
   "instagram_1773388614248.mp4",
-  "instagram_1773388614215.mp4",
-  "instagram_1773388614240.mp4",
-  "instagram_1773388588826.mp4",
   "instagram_1773388588977.mp4",
-  "instagram_1773388589036.mp4",
-  "instagram_1773388589077.mp4",
-  "instagram_1773388588930.mp4",
-  "instagram_1773388589097.mp4",
-  "instagram_1773388589045.mp4",
-  "instagram_1773388589066.mp4",
-  "instagram_1773388589024.mp4",
-  "instagram_1773388588953.mp4",
-  "instagram_1773388588945.mp4",
-  "instagram_1773388589004.mp4",
-  "instagram_1773388589014.mp4",
-  "instagram_1773388588833.mp4",
-  "instagram_1773388588937.mp4",
-  "instagram_1773388588986.mp4",
-  "instagram_1773388589056.mp4",
-  "instagram_1773388588899.mp4",
-  "instagram_1773388588969.mp4",
-  "instagram_1773388589130.mp4",
-  "instagram_1773388588915.mp4",
-  "instagram_1773388589087.mp4",
-  "instagram_1773388588961.mp4",
-  "instagram_1773388544821.mp4",
-  "instagram_1773388544849.mp4",
-  "instagram_1773388544828.mp4",
-  "instagram_1773388544833.mp4"
+  "instagram_1773388544849.mp4"
 ];
 
-const shippingThreshold = 80;
+const shippingThreshold = 1800;
+
 const state = {
   filter: "all",
   search: "",
@@ -362,13 +357,11 @@ function saveCart() {
 }
 
 function formatPrice(value) {
-  const inrValue = value * usdToInrRate;
-
   return new Intl.NumberFormat("en-IN", {
     style: "currency",
     currency: "INR",
     maximumFractionDigits: 0
-  }).format(inrValue);
+  }).format(value);
 }
 
 function getFilteredProducts() {
@@ -437,7 +430,7 @@ function renderProducts() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Ask
+                View
               </a>
             </div>
           </div>
@@ -469,7 +462,7 @@ function renderUploadedMedia() {
                     <figure class="collection-media-card">
                       <img
                         src="./uploads/photos/${fileName}"
-                        alt="${panel.label} crochet product photo ${index + 1}"
+                        alt="${panel.label} crochet photo ${index + 1}"
                         loading="lazy"
                         decoding="async"
                       >
