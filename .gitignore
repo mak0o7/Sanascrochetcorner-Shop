@@ -2,3 +2,6 @@
 preview-*.png
 thecrochet-corner-site.zip
 smoke.txt
+node_modules/
+.next/
+build.log
