@@ -1,0 +1,32 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">The Crochet Corner logo</title>
+  <desc id="desc">Overlapping T and C monogram with botanical sprigs and the words The Crochet Corner.</desc>
+  <g fill="none" stroke="#8b827b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M180 165C145 205 138 260 168 320" />
+    <path d="M460 295C425 332 408 382 402 448" />
+    <path d="M206 178c-10-26-28-46-50-58" />
+    <path d="M190 218c-16-24-38-38-66-44" />
+    <path d="M174 258c-18-18-40-25-67-23" />
+    <path d="M166 300c-17-12-35-16-54-12" />
+    <path d="M444 309c8-24 24-43 49-57" />
+    <path d="M428 351c17-18 39-28 66-30" />
+    <path d="M416 394c20-15 42-21 68-18" />
+    <path d="M410 435c18-10 37-13 58-9" />
+    <path d="M154 126c19 10 34 25 43 46" />
+    <path d="M129 172c20 3 38 12 54 28" />
+    <path d="M108 222c21-2 40 4 56 18" />
+    <path d="M97 286c18-2 34 1 49 11" />
+    <path d="M492 252c-20 11-34 26-42 46" />
+    <path d="M513 302c-22 2-40 10-54 25" />
+    <path d="M507 357c-22-2-42 4-58 19" />
+    <path d="M489 417c-18-1-34 3-48 11" />
+  </g>
+  <g fill="#111111" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="318" y="230" font-size="250" font-weight="700">T</text>
+    <text x="298" y="430" font-size="300" font-weight="700">C</text>
+  </g>
+  <g fill="#5d5b58" font-family="Arial, Helvetica, sans-serif" font-size="38" letter-spacing="12" text-anchor="middle">
+    <text x="320" y="525">THE CROCHET</text>
+    <text x="320" y="585">CORNER</text>
+  </g>
+</svg>

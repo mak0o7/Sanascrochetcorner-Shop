@@ -1,6 +1,10 @@
 async function loadProducts(containerId, limit) {
   try {
     const res = await fetch('products.json');
+    if (!res.ok) {
+      // make it easy to diagnose missing/404 JSON file
+      throw new Error(`Unable to fetch products.json – status ${res.status}`);
+    }
     const products = await res.json();
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -10,10 +14,11 @@ async function loadProducts(containerId, limit) {
       html += `
       <div class="product" data-name="${p.name}" data-price="${p.price}">
         <img src="${p.image}" alt="${p.name}">
-        <h4>${p.name}</h4>
-        <p>${p.description}</p>
-        <span>$${p.price.toFixed(2)}</span>
-        <button class="add-to-cart">Add to Cart</button>
+        <div class="product-body">
+          <div class="product-name">${p.name}</div>
+          <div class="product-price">&#8377;${p.price}</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>`;
     });
     container.innerHTML = html;
@@ -27,5 +32,9 @@ async function loadProducts(containerId, limit) {
     });
   } catch (err) {
     console.error('Failed to load products:', err);
+    const container = document.getElementById(containerId);
+    if (container) {
+      container.innerHTML = '<p class="error">Sorry, we could not load the product list at this time.</p>';
+    }
   }
 }

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebP Convert</title>
+</head>
+<body>
+  <pre id="output">pending</pre>
+  <script>
+    const output = document.getElementById("output");
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get("src");
+    const quality = Number(params.get("quality") || "0.85");
+
+    if (!src) {
+      output.textContent = "ERROR: Missing src";
+      throw new Error("Missing src");
+    }
+
+    const image = new Image();
+    image.decoding = "sync";
+    image.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      const context = canvas.getContext("2d");
+
+      if (!context) {
+        output.textContent = "ERROR: Canvas unavailable";
+        return;
+      }
+
+      context.drawImage(image, 0, 0);
+      output.textContent = canvas.toDataURL("image/webp", quality);
+    };
+
+    image.onerror = () => {
+      output.textContent = "ERROR: Failed to load " + src;
+    };
+
+    image.src = src;
+  </script>
+</body>
+</html>

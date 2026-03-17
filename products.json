@@ -1,14 +1,56 @@
 [
   {
-    "name": "Crochet Plushie",
-    "price": 15.00,
-    "image": "product1.jpg",
-    "description": "Soft, cuddly, and perfect for gifts!"
+    "name": "Flag Pouch Charm",
+    "price": 649,
+    "image": "instagram_1773266053988.png",
+    "description": "A cute crochet flag pouch charm for your bag."
   },
   {
-    "name": "Crochet Blanket",
-    "price": 45.00,
-    "image": "product2.jpg",
-    "description": "Cozy blanket made with high-quality yarn."
+    "name": "Flat Flag Charm",
+    "price": 649,
+    "image": "instagram_1773266053970.png",
+    "description": "Delicate flat flag charm, perfect everyday accessory."
+  },
+  {
+    "name": "Flag Pocket Charm",
+    "price": 649,
+    "image": "instagram_1773266054004.png",
+    "description": "Flag pocket charm in soft blush tones."
+  },
+  {
+    "name": "Heart Charm",
+    "price": 799,
+    "image": "instagram_1773266053977.png",
+    "description": "Loveable heart charm in a pastel palette."
+  },
+  {
+    "name": "Paw Print Charm",
+    "price": 449,
+    "image": "instagram_1773266054026.png",
+    "description": "Adorable bear paw charm for animal lovers."
+  },
+  {
+    "name": "Cherry Pair Charm",
+    "price": 449,
+    "image": "instagram_1773266054057.png",
+    "description": "Bright cherry charm pair, playful and vibrant."
+  },
+  {
+    "name": "Sunflower Charm",
+    "price": 549,
+    "image": "instagram_1773266054214.png",
+    "description": "Cheerful sunflower keychain, hand-held sunshine."
+  },
+  {
+    "name": "Blush Tulip Charm",
+    "price": 549,
+    "image": "instagram_1773266054223.png",
+    "description": "Soft pink and red tulip flower charm."
+  },
+  {
+    "name": "Bag Buddy Charm",
+    "price": 699,
+    "image": "instagram_1773266054127.png",
+    "description": "Show-off charm designed to hang from your tote."
   }
 ]

@@ -30,6 +30,9 @@ async function renderCart() {
   let priceMap = {};
   try {
     const res = await fetch('products.json');
+    if (!res.ok) {
+      throw new Error(`fetch products.json failed (${res.status})`);
+    }
     const products = await res.json();
     products.forEach(p => priceMap[p.name] = p.price);
   } catch (e) {
@@ -41,10 +44,10 @@ async function renderCart() {
   cart.forEach(item => {
     // use updated price if available
     const currentPrice = priceMap[item.name] || item.price;
-    html += `<li>${item.name} x${item.qty} - $${(currentPrice * item.qty).toFixed(2)}</li>`;
+    html += `<li>${item.name} x${item.qty} — &#8377;${(currentPrice * item.qty).toFixed(0)}</li>`;
     total += currentPrice * item.qty;
   });
-  html += `</ul><p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+  html += `</ul><p style="margin-top:1em;font-family:var(--font-serif);font-size:1rem;"><strong>Total: &#8377;${total.toFixed(0)}</strong></p>`;
   container.innerHTML = html;
 }
 function checkout() {
