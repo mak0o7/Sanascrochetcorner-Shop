@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "images/**": true,
+    "uploads/**": true
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5500
+}
